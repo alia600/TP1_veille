@@ -1,0 +1,18 @@
+body{
+    background-color: #1d1d1d;
+    color: white;
+    font-family: Sansation;
+}
+
+ul>li:nth-child(1){
+    opacity: 1;
+}
+
+video{
+    filter:opacity(30%);
+}
+
+footer{
+    background-color: #ececec;
+    color: #1d1d1d;
+}

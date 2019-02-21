@@ -15,17 +15,3 @@ li {
     text-align: center;
     opacity: 0.5;
 }
-
-ul>li:nth-child(1){
-    opacity: 1;
-}
-
-//résolution grand-écran
-@media screen and (min-width: 900px){
-    nav{
-        text-align: right;
-        margin-right: 5em;
-        margin-top: 0.5em;
-    }
-}
-

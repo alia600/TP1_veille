@@ -352,17 +352,12 @@ template {
 }
 
 body {
-  background-color: #1d1d1d;
-  color: white;
-  font-family: Sansation;
   overflow-x: hidden;
   width: 100vw;
 }
 
 video {
   width: 400%;
-  -webkit-filter: opacity(30%);
-          filter: opacity(30%);
   -webkit-transform: translate(-50%, -10%);
           transform: translate(-50%, -10%);
 }
@@ -383,8 +378,6 @@ video {
 
 footer {
   text-align: center;
-  background-color: #ececec;
-  color: #1d1d1d;
 }
 
 footer > p {
@@ -402,6 +395,11 @@ footer > p {
 }
 
 @media screen and (min-width: 900px) {
+  nav {
+    text-align: right;
+    margin-right: 5em;
+    margin-top: 0.5em;
+  }
   video {
     width: 100%;
     -webkit-transform: translate(0%, -10%);
@@ -437,15 +435,23 @@ li {
   opacity: 0.5;
 }
 
+body {
+  background-color: #1d1d1d;
+  color: white;
+  font-family: Sansation;
+}
+
 ul > li:nth-child(1) {
   opacity: 1;
 }
 
-@media screen and (min-width: 900px) {
-  nav {
-    text-align: right;
-    margin-right: 5em;
-    margin-top: 0.5em;
-  }
+video {
+  -webkit-filter: opacity(30%);
+          filter: opacity(30%);
+}
+
+footer {
+  background-color: #ececec;
+  color: #1d1d1d;
 }
 /*# sourceMappingURL=style.css.map */
