@@ -12,7 +12,13 @@ video{
     filter:opacity(30%);
 }
 
+.wrapper div{
+    background-color: red;
+    border: 3px black dotted;
+}
+
 footer{
+    padding: 1em;
     background-color: #ececec;
     color: #1d1d1d;
 }

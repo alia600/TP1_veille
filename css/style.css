@@ -356,6 +356,10 @@ body {
   width: 100vw;
 }
 
+header {
+  height: 117vh;
+}
+
 video {
   width: 400%;
   -webkit-transform: translate(-50%, -10%);
@@ -374,6 +378,23 @@ video {
 
 .titre > p:nth-child(1) {
   font-size: 3em;
+}
+
+.wrapper {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.wrapper div {
+  height: 10em;
+}
+
+.wrapper div img {
+  width: 100%;
 }
 
 footer {
@@ -450,7 +471,13 @@ video {
           filter: opacity(30%);
 }
 
+.wrapper div {
+  background-color: red;
+  border: 3px black dotted;
+}
+
 footer {
+  padding: 1em;
   background-color: #ececec;
   color: #1d1d1d;
 }

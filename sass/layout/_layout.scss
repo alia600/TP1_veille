@@ -3,6 +3,9 @@ body{
     width: 100vw;
 }
 
+header{
+    height: 117vh;
+}
 
 video{
     width: 400%;
@@ -20,6 +23,21 @@ video{
 
 .titre>p:nth-child(1){
     font-size: 3em;
+}
+
+.wrapper{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.wrapper div{
+    height: 10em;
+}
+
+.wrapper div img{
+    width: 100%;
 }
 
 footer{
