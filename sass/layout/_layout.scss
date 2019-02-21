@@ -1,18 +1,70 @@
-@font-face{
-    font-family: centabel;
-    src: url(../font/centabel/centabel.ttf);
-}
-
-@font-face{
-    font-family: Sansation;
-    src: url(../font/sensation/Sansation_Regular.ttf);
-}
-
-
 body{
     background-color: #1d1d1d;
     color: white;
     font-family: Sansation;
     overflow-x: hidden;
     width: 100vw;
+}
+
+
+video{
+    width: 400%;
+    filter:opacity(30%);
+    transform: translate(-50%, -10%);
+}
+
+.titre{
+   transform: translateY(-45em);
+}
+
+.titre>p{
+    text-align: center;
+    font-size: 1em;
+}
+
+.titre>p:nth-child(1){
+    font-size: 3em;
+}
+
+footer{
+    text-align: center;
+    background-color: #ececec;
+    color: #1d1d1d;
+}
+
+footer>p{
+    margin: 0;
+}
+
+//résolution tablette
+@media screen and (min-width : 600px){
+    video{
+        width: 260%;
+    }
+
+    .titre>p{
+        text-align: center;
+        font-size: 1.5em;
+    }
+}
+
+//résolution grand-écran
+@media screen and (min-width: 900px){
+    video{
+        width: 100%;
+        transform: translate(0%,-10%);
+    }
+
+    .titre{
+        margin-left: 3em;
+    }
+
+    .titre>p{
+        text-align: left;
+        font-size: 3em;
+    }
+
+    .titre>p:nth-child(1){
+        font-size: 5em;
+    }
 }

@@ -359,36 +359,6 @@ body {
   width: 100vw;
 }
 
-nav {
-  text-align: center;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  margin: 0 0.6em 0 0.6em;
-  font-size: 1.3em;
-  list-style: none;
-  display: inline;
-  text-align: center;
-  opacity: 0.5;
-}
-
-ul > li:nth-child(1) {
-  opacity: 1;
-}
-
-@media screen and (min-width: 900px) {
-  nav {
-    text-align: right;
-    margin-right: 5em;
-    margin-top: 0.5em;
-  }
-}
-
 video {
   width: 400%;
   -webkit-filter: opacity(30%);
@@ -409,6 +379,16 @@ video {
 
 .titre > p:nth-child(1) {
   font-size: 3em;
+}
+
+footer {
+  text-align: center;
+  background-color: #ececec;
+  color: #1d1d1d;
+}
+
+footer > p {
+  margin: 0;
 }
 
 @media screen and (min-width: 600px) {
@@ -439,13 +419,33 @@ video {
   }
 }
 
-footer {
+nav {
   text-align: center;
-  background-color: #ececec;
-  color: #1d1d1d;
 }
 
-footer > p {
+ul {
+  padding: 0;
   margin: 0;
+}
+
+li {
+  margin: 0 0.6em 0 0.6em;
+  font-size: 1.3em;
+  list-style: none;
+  display: inline;
+  text-align: center;
+  opacity: 0.5;
+}
+
+ul > li:nth-child(1) {
+  opacity: 1;
+}
+
+@media screen and (min-width: 900px) {
+  nav {
+    text-align: right;
+    margin-right: 5em;
+    margin-top: 0.5em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
