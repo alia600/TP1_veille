@@ -22,6 +22,7 @@ li {
     text-align: center;
     /*Pour cet exemple, on fixe la largeur du menu à 100% ou 100vw*/
     width: 100vw;
+    height: 100vh;
     /*Propriété comme item flex - ne peut rétrécir*/
     flex: 1 0 100%;
     /*Contexte flex en colonne pour ses enfants*/
@@ -29,6 +30,7 @@ li {
     flex-direction: column;
     justify-content: center;
     overflow-x: hidden; overflow-y: auto;
+    transform: translateX(-100%);
 }
 
 .menu a {
@@ -53,8 +55,12 @@ li {
     transition: transform 1s;
 }
 
+.global{
+    transition: transform 1s;
+}
+
 #chkBoutonBurger:checked~.global {
-    transform: translateX(0%);
+    transform: translateX(100%);
 }
 
 #chkBoutonBurger:checked~.boutonBurger {
@@ -79,9 +85,10 @@ li {
 
     .menu {
         /*Propriété comme item flex - ne peut s'étirer en hauteur*/
+        transform: translateX(0);
         background-color: none;
         flex: 0 0 100%;
-        min-height: 5vh;
+        height: 5vh;
         /*Affichage du menu en rangée*/
         flex-direction: row;
         justify-content: space-between;
