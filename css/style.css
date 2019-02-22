@@ -408,6 +408,9 @@ footer > p {
 }
 
 @media screen and (min-width: 600px) {
+  header {
+    height: 100vh;
+  }
   video {
     width: 260%;
   }
@@ -422,6 +425,9 @@ footer > p {
 }
 
 @media screen and (min-width: 900px) {
+  header {
+    height: 110vh;
+  }
   nav {
     position: fixed;
     right: 3em;
