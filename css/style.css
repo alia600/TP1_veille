@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/*normalize*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -341,6 +343,7 @@ template {
   display: none;
 }
 
+/*Typo*/
 @font-face {
   font-family: centabel;
   src: url(../font/centabel/centabel.ttf);
@@ -351,8 +354,8 @@ template {
   src: url(../font/sensation/Sansation_Regular.ttf);
 }
 
+/*Layout*/
 body {
-  overflow-x: hidden;
   width: 100vw;
 }
 
@@ -460,34 +463,157 @@ footer > p {
   }
 }
 
-nav {
-  text-align: center;
+/*navigation*/
+/*nav{
+    text-align: center;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
+ul{
+    padding: 0;
+    margin: 0;
 }
 
 li {
-  margin: 0 0.6em 0 0.6em;
-  font-size: 1.3em;
-  list-style: none;
-  display: inline;
+    margin: 0 0.6em 0 0.6em;
+    font-size: 1.3em;
+    list-style: none;
+    display: inline;
+    text-align: center;
+    opacity: 0.5;
+}*/
+.menu {
+  background-color: white;
+  color: black;
   text-align: center;
-  opacity: 0.5;
+  /*Pour cet exemple, on fixe la largeur du menu à 100% ou 100vw*/
+  width: 100vw;
+  height: 100vh;
+  /*Propriété comme item flex - ne peut rétrécir*/
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  /*Contexte flex en colonne pour ses enfants*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
+.menu a {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.menu a:first-child {
+  border-top: 1px solid white;
+}
+
+.boutonBurger {
+  background: -webkit-gradient(linear, left top, left bottom, from(#E84545), color-stop(20%, #E84545), color-stop(20%, transparent), color-stop(40%, transparent), color-stop(40%, #E84545), color-stop(60%, #E84545), color-stop(60%, transparent), color-stop(80%, transparent), color-stop(80%, #E84545), to(#E84545));
+  background: linear-gradient(to bottom, #E84545 0%, #E84545 20%, transparent 20%, transparent 40%, #E84545 40%, #E84545 60%, transparent 60%, transparent 80%, #E84545 80%, #E84545 100%);
+  height: 48px;
+  width: 48px;
+  margin: 1%;
+  display: inline-block;
+  cursor: pointer;
+  /*Effet de transition sur la rotation*/
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.global {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+#chkBoutonBurger:checked ~ .global {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+#chkBoutonBurger:checked ~ .boutonBurger {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+#chkBoutonBurger {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .boutonBurger {
+    display: none;
+  }
+  .global {
+    /*Placer à sa potition d'origine*/
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    display: block;
+    /*Mettre le contenu en colonne*/
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu {
+    /*Propriété comme item flex - ne peut s'étirer en hauteur*/
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    background-color: none;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    height: 5vh;
+    /*Affichage du menu en rangée*/
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+  .menu a {
+    border: none;
+    border-left: 1px solid white;
+    /*Propriété comme item flex - peut s'étirer en largeur*/
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+  .menu a:first-child {
+    border-top: none;
+  }
+}
+
+/*element*/
 body {
   background-color: #1d1d1d;
   color: white;
   font-family: Sansation;
 }
 
-ul > li:nth-child(1) {
-  opacity: 1;
-}
-
+/*ul>li:nth-child(1){
+    opacity: 1;
+}*/
 video {
   -webkit-filter: opacity(30%);
           filter: opacity(30%);

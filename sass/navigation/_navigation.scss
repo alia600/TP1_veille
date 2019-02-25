@@ -1,4 +1,4 @@
-nav{
+/*nav{
     text-align: center;
 }
 
@@ -14,4 +14,93 @@ li {
     display: inline;
     text-align: center;
     opacity: 0.5;
+}*/
+
+.menu {
+    background-color:white;
+    color:black;
+    text-align: center;
+    /*Pour cet exemple, on fixe la largeur du menu à 100% ou 100vw*/
+    width: 100vw;
+    height: 100vh;
+    /*Propriété comme item flex - ne peut rétrécir*/
+    flex: 1 0 100%;
+    /*Contexte flex en colonne pour ses enfants*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden; overflow-y: auto;
+    transform: translateX(-100%);
 }
+
+.menu a {
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.menu a:first-child {
+    border-top: 1px solid white;
+}
+
+.boutonBurger {
+    background: linear-gradient(to bottom, #E84545 0%, #E84545 20%, transparent 20%, transparent 40%, #E84545 40%, #E84545 60%, transparent 60%, transparent 80%, #E84545 80%, #E84545 100%);
+    height: 48px;
+    width: 48px;
+    margin: 1%;
+    display: inline-block;
+    cursor: pointer;
+    /*Effet de transition sur la rotation*/
+    transition: transform 1s;
+}
+
+.global{
+    transition: transform 1s;
+}
+
+#chkBoutonBurger:checked~.global {
+    transform: translateX(100%);
+}
+
+#chkBoutonBurger:checked~.boutonBurger {
+    transform: rotate(90deg);
+}
+
+#chkBoutonBurger {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .boutonBurger {
+        display: none
+    }
+            
+    .global {
+        /*Placer à sa potition d'origine*/
+        transform: translateX(0%);
+        display: block;
+        /*Mettre le contenu en colonne*/				
+        flex-direction: column;
+    }
+
+    .menu {
+        /*Propriété comme item flex - ne peut s'étirer en hauteur*/
+        transform: translateX(0);
+        background-color: none;
+        flex: 0 0 100%;
+        height: 5vh;
+        /*Affichage du menu en rangée*/
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: flex-start;
+    }
+    .menu a {
+        border: none;
+        border-left: 1px solid white;
+        /*Propriété comme item flex - peut s'étirer en largeur*/
+        flex: 1 0 auto;
+    }
+    .menu a:first-child {
+        border-top: none;
+    }
+} 
