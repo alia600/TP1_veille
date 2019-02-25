@@ -87,7 +87,7 @@ li {
         /*Propriété comme item flex - ne peut s'étirer en hauteur*/
         transform: translateX(0);
         background-color: none;
-        flex: 0 0 100%;
+        flex: 1 0 100%;
         height: 5vh;
         /*Affichage du menu en rangée*/
         flex-direction: row;
