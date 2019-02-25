@@ -1,7 +1,3 @@
-import {
-    Util
-} from './Util.js'
-
 export class AnimLettre {
     /**
      * Classe permettant de créer et d'animer une introduction
@@ -13,7 +9,6 @@ export class AnimLettre {
      */
 
     constructor(lesLettres, elmParent, fonction) {
-        this.tabCouleur = ['#CC231E', '#235E6F', '#009900', '#34A65F', '#0F8A5F', '#F5624D'];
         this.lesLettres = lesLettres
         this.elmParent = elmParent;
         this.fonction = fonction
@@ -25,18 +20,18 @@ export class AnimLettre {
 animerLettre(lesLettres) {
      console.log('lettre = ' +lesLettres)
     let elmConteneur = this.creerElement(this.elmParent,
-        'section',
+        'p',
         '',
         'mot')
     let i = 0 
     for (let uneLettre of lesLettres)
     {
         let elmlettre = this.creerElement(elmConteneur,
-            'div',
+            'p',
             uneLettre,
             '')
         elmlettre.style.animationDelay = (i * 0.5) + "s";
-        elmlettre.style.color = this.tabCouleur[(i++) % 6]
+        elmlettre.style.color = "#FFFFFF"
     }
 
 
